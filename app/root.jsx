@@ -1,5 +1,10 @@
 import * as React from 'react'
 
+export async function loader() {
+  console.log(process.env.SESSION_SECRET);
+  return {}
+}
+
 export default function App() {
   const [count, setCount] = React.useState(0)
   return (
