@@ -173,3 +173,11 @@ dist
 
 # Finder (MacOS) folder config
 .DS_Store
+
+# Remix
+
+/.cache
+/build
+/public/build
+.env
+.vercel
