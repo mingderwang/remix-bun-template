@@ -1,6 +1,8 @@
 {
-  "name": "bun",
-  "version": "0.0.1",
+  "name": "remix-bun",
+  "version": "0.0.2",
+  "description": "",
+  "keywords": ["remix", "bun"],
   "type": "module",
   "scripts": {
     "build": "remix build",
