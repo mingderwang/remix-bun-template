@@ -1,32 +1,29 @@
-import { useLoaderData, useActionData } from "@remix-run/react"
-import { json } from "@remix-run/node"
-export async function loader() {
-  return json({
-    ENV: {
-      SESSION_SECRET: process.env.SESSION_SECRET,
-    },
-  });
-}
+import {
+  Links,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+} from "@remix-run/react";
 
-export function Root() {
-  const data = useLoaderData<typeof loader>();
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
       <body>
-        <Outlet />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.ENV = ${JSON.stringify(
-              data.ENV
-            )}`,
-          }}
-        />
+        {children}
+        <ScrollRestoration />
         <Scripts />
       </body>
     </html>
   );
+}
+
+export default function App() {
+  return <Outlet />;
 }

@@ -6,14 +6,17 @@
   "keywords": ["remix", "bun"],
   "type": "module",
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev",
-    "start": "remix-serve build",
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
+    "lint": "eslint --ignore-pattern .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.8.1",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "eslint": "^9.0.0",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -22,6 +25,8 @@
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
     "@remix-run/serve": "^2.8.1",
+    "@types/react": "^18.2.77",
+    "@types/react-dom": "^18.2.25",
     "isbot": "^4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
