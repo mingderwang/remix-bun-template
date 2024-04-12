@@ -2,6 +2,7 @@
   "name": "remix-bun",
   "version": "0.0.2",
   "description": "",
+  "license": "MIT",
   "keywords": ["remix", "bun"],
   "type": "module",
   "scripts": {
