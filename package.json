@@ -1,6 +1,6 @@
 {
-  "name": "remix-bun",
-  "version": "0.0.2",
+  "name": "remix-bun-template",
+  "version": "0.0.3",
   "description": "",
   "license": "MIT",
   "keywords": ["remix", "bun"],
